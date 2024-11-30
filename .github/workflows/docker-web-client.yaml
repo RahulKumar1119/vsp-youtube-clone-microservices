@@ -20,12 +20,12 @@ jobs:
       with:
         version: '430.0.0'
 
-    - name: Authenticate to Google Cloud
-      run: echo "${{ secrets.GCR_CREDENTIALS_JSON }}" > ${{ runner.temp }}/key.json
+    # - name: Authenticate to Google Cloud
+    #   run: echo "${{ secrets.GCR_CREDENTIALS_JSON }}" > ${{ runner.temp }}/key.json
 
-    - name: Login to Google Cloud
-      run: |
-        gcloud auth activate-service-account --key-file=${{ runner.temp }}/key.json
+    # - name: Login to Google Cloud
+    #   run: |
+    #     gcloud auth activate-service-account --key-file=${{ runner.temp }}/key.json
 
     # Configure Docker for Google Artifact Registry
     - name: Configure Docker for Artifact Registry
